@@ -1,0 +1,230 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;1,500&family=Raleway:wght@300;400;500&display=swap");
+
+:root {
+  --purple-main: rgb(130, 91, 180);
+  --purple-main-bright: rgb(167, 128, 218);
+  --purple-main-dark: rgb(111, 86, 145);
+  --text-main: rgb(83, 83, 83);
+  --white-main-bg: rgba(255, 255, 255, 0.9);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Basic homepage layout */
+body {
+  background-image: url("./Images/pexels-karolina-grabowska-4203073.jpg");
+  overflow: hidden;
+  overflow-y: scroll;
+  background-position-y: -180px;
+}
+
+.page-main {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+}
+
+.result-container {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+  width: 50%;
+  margin: 30px auto 0px auto;
+}
+
+button {
+  font-size: 20px;
+  padding: 8px;
+  margin-left: 10px;
+  color: white;
+  background-color: var(--purple-main);
+  outline: none;
+  border: none;
+  border-radius: 4px;
+  font-family: "Raleway", sans-serif;
+}
+
+button:hover {
+  cursor: pointer;
+  background-color: var(--purple-main-bright);
+}
+button:active {
+  cursor: pointer;
+  background-color: var(--purple-main-dark);
+}
+/* Welcome styles */
+.welcome-main {
+  margin: 30px auto 0px auto;
+  background-color: var(--white-main-bg);
+  border-radius: 0.7rem;
+  padding: 18px;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.welcome-title {
+  font-family: "Raleway", sans-serif;
+  font-weight: 500;
+  font-size: 36px;
+  color: rgb(130, 91, 180);
+}
+h3 {
+  margin-top: 12px;
+  font-family: "Raleway", sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  color: var(--text-main);
+}
+
+/* Search Form Styles */
+.form-container {
+  margin: 20px auto 0px auto;
+  display: flex;
+  width: 380px;
+}
+.form-container input {
+  font-family: "Raleway", sans-serif;
+  color: rgb(255, 255, 255);
+  font-size: 19px;
+  padding: 8px;
+  width: 300px;
+  background-color: var(--text-main);
+  outline: none;
+  border: none;
+  border-radius: 4px;
+  margin: auto;
+}
+.get-started {
+  margin: 10px auto 0px auto;
+  font-family: "Raleway", sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  color: white;
+}
+
+/* Details Styles */
+
+.details-main {
+  background-color: rgba(0, 0, 0, 0.6);
+  width: 600px;
+  padding: 10px;
+  color: white;
+  border-radius: 0.35rem;
+  font-family: "Raleway", sans-serif;
+  font-weight: 300;
+}
+.details-main h3 {
+  color: white;
+  font-family: "Playfair Display", serif;
+  font-weight: 500;
+  font-size: 28px;
+  margin: 0 0 16px 0;
+  font-style: italic;
+}
+.details-main h4 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  font-family: "Raleway", sans-serif;
+  font-weight: 500;
+}
+
+.details-main p {
+  font-size: 19px;
+  margin-bottom: 6px;
+  line-height: 24px;
+}
+
+/* Synonyms Styles */
+
+.synonyms-container {
+  font-family: "Raleway", sans-serif;
+  padding: 8px;
+  border: none;
+  border-radius: 0.7rem;
+  margin-left: 20px;
+  background-color: var(--white-main-bg);
+}
+
+.synonyms-container h4 {
+  min-width: 195px;
+  font-size: 20px;
+  color: var(--purple-main);
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+
+.synonym {
+  font-size: 19px;
+  color: var(--text-main);
+  font-weight: 400;
+  line-height: 24px;
+}
+
+/* Tablet Styles */
+
+@media only screen and (max-width: 940px) {
+  body {
+    overflow-y: scroll;
+    background-position-y: -10px;
+  }
+  .form-container {
+    margin: 20px auto 0px auto;
+    width: 100%;
+  }
+  .form-container input {
+    font-size: 19px;
+    padding: 8px;
+    width: 95%;
+  }
+  .result-container {
+    margin-top: 20px;
+    width: 80%;
+  }
+  .welcome-main {
+    margin: 30px auto 0px auto;
+    width: 80%;
+  }
+}
+
+/* Mobile Styles */
+
+@media only screen and (max-width: 480px) {
+  body {
+    overflow-y: scroll;
+    background: rgb(205, 191, 178);
+    background-position-y: 0px;
+  }
+  .form-container {
+    margin: 20px auto 0px auto;
+    width: 100%;
+  }
+  .form-container input {
+    font-size: 19px;
+    padding: 8px;
+    width: 95%;
+  }
+  .result-container {
+    flex-direction: column;
+    align-items: center;
+    width: 95%;
+    margin: 20px auto 0px auto;
+  }
+  .welcome-main {
+    margin: 20px auto 0px auto;
+    width: 90%;
+  }
+  .details-main {
+    width: 95%;
+    padding: 10px;
+  }
+  .synonyms-container {
+    width: 95%;
+    margin: 10px auto 0px auto;
+  }
+}
