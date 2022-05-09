@@ -1,5 +1,4 @@
-import React, { useContext, useEffect } from "react";
-import { useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 
 const url = "https://api.dictionaryapi.dev/api/v2/entries/en/";
 const AppContext = React.createContext();

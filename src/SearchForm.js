@@ -1,6 +1,5 @@
-import React from "react";
+import React, { useRef } from "react";
 import { useGlobalContext } from "./context";
-import { useRef } from "react";
 
 const SearchForm = () => {
   const { setSearchTerm } = useGlobalContext();
@@ -18,7 +17,7 @@ const SearchForm = () => {
       </section>
       <h3>Expand your vocabulary or just brush up on your knowledge</h3>
       <form className="form-container" onSubmit={handleSubmit}>
-        <input type="text" placeholder="example: stoicism" ref={refContainer} />
+        <input type="text" placeholder="example: stoic" ref={refContainer} />
         <button type="submit" onClick={handleSubmit}>
           Search
         </button>
