@@ -67,12 +67,14 @@ button:active {
   display: flex;
   flex-direction: column;
   align-items: center;
+  animation: fadeIn 0.25s forwards linear;
 }
 .welcome-title {
   font-family: "Raleway", sans-serif;
   font-weight: 500;
   font-size: 36px;
   color: rgb(130, 91, 180);
+  animation: fadeFromLeft 0.25s;
 }
 h3 {
   margin-top: 12px;
@@ -80,6 +82,7 @@ h3 {
   font-weight: 400;
   font-size: 20px;
   color: var(--text-main);
+  animation: fadeFromLeft 0.25s;
 }
 
 /* Search Form Styles */
@@ -87,6 +90,7 @@ h3 {
   margin: 20px auto 0px auto;
   display: flex;
   width: 380px;
+  animation: fadeFromLeft 0.25s;
 }
 .form-container input {
   font-family: "Raleway", sans-serif;
@@ -106,6 +110,7 @@ h3 {
   font-weight: 500;
   font-size: 20px;
   color: white;
+  animation: fadeFromLeft 0.25s;
 }
 
 /* Details Styles */
@@ -118,6 +123,7 @@ h3 {
   border-radius: 0.35rem;
   font-family: "Raleway", sans-serif;
   font-weight: 300;
+  animation: fadeIn 0.4s;
 }
 .details-main h3 {
   color: white;
@@ -126,18 +132,21 @@ h3 {
   font-size: 28px;
   margin: 0 0 16px 0;
   font-style: italic;
+  animation: fadeFromLeft 0.4s;
 }
 .details-main h4 {
   font-size: 20px;
   margin-bottom: 10px;
   font-family: "Raleway", sans-serif;
   font-weight: 500;
+  animation: fadeFromLeft 0.4s;
 }
 
 .details-main p {
   font-size: 19px;
   margin-bottom: 6px;
   line-height: 24px;
+  animation: fadeFromLeft 0.25s;
 }
 
 /* Synonyms Styles */
@@ -149,6 +158,7 @@ h3 {
   border-radius: 0.7rem;
   margin-left: 20px;
   background-color: var(--white-main-bg);
+  animation: fadeIn 0.4s;
 }
 
 .synonyms-container h4 {
@@ -157,6 +167,7 @@ h3 {
   color: var(--purple-main);
   margin-bottom: 10px;
   font-weight: 500;
+  animation: fadeFromRight 0.4s;
 }
 
 .synonym {
@@ -164,6 +175,7 @@ h3 {
   color: var(--text-main);
   font-weight: 400;
   line-height: 24px;
+  animation: fadeFromRight 0.4s;
 }
 
 /* Tablet Styles */
@@ -226,5 +238,38 @@ h3 {
   .synonyms-container {
     width: 95%;
     margin: 10px auto 0px auto;
+  }
+}
+
+/* Animations */
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeFromLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-150px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+@keyframes fadeFromRight {
+  from {
+    opacity: 0;
+    transform: translateX(150px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px);
   }
 }
