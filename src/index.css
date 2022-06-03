@@ -17,9 +17,8 @@
 /* Basic homepage layout */
 body {
   background-image: url("./Images/pexels-karolina-grabowska-4203073.jpg");
-  overflow: hidden;
-  overflow-y: scroll;
-  background-position-y: -180px;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .page-main {
@@ -110,6 +109,9 @@ h3 {
   font-weight: 500;
   font-size: 20px;
   color: white;
+  padding: 8px;
+  border-radius: 0.35rem;
+  background-color: rgba(0, 0, 0, 0.6);
   animation: fadeFromLeft 0.25s;
 }
 
