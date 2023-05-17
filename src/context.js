@@ -13,7 +13,7 @@ const AppProvider = ({ children }) => {
     try {
       const res = await fetch(`${url}${word}`);
       const data = await res.json();
-      if (data.title == "No Definitions Found") {
+      if (data.title === "No Definitions Found") {
         setFaultySearch(true);
         return;
       }

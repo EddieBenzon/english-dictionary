@@ -17,7 +17,6 @@
 /* Basic homepage layout */
 body {
   background-image: url("./Images/pexels-karolina-grabowska-4203073.jpg");
-  background-size: cover;
   background-repeat: no-repeat;
 }
 
@@ -181,11 +180,15 @@ h3 {
 }
 
 /* Tablet Styles */
-
+@media only screen and (max-width: 1270px) {
+  body {
+    background-position-x: -400px;
+  }
+}
 @media only screen and (max-width: 940px) {
   body {
     overflow-y: scroll;
-    background-position-y: -10px;
+    background-position-x: -500px;
   }
   .form-container {
     margin: 20px auto 0px auto;
