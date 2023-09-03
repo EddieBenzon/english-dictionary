@@ -17,6 +17,7 @@
 /* Basic homepage layout */
 body {
   background-image: url("./Images/pexels-karolina-grabowska-4203073.jpg");
+  background-size: auto;
   background-repeat: no-repeat;
 }
 
@@ -119,12 +120,15 @@ h3 {
 .details-main {
   background-color: rgba(0, 0, 0, 0.6);
   width: 600px;
-  padding: 10px;
+  padding: 18px;
   color: white;
   border-radius: 0.35rem;
   font-family: "Raleway", sans-serif;
   font-weight: 300;
   animation: fadeIn 0.4s;
+  max-height: 950px;
+  overflow-y: scroll;
+  margin-bottom: 20px;
 }
 .details-main h3 {
   color: white;
@@ -180,15 +184,30 @@ h3 {
 }
 
 /* Tablet Styles */
+@media only screen and (max-width: 1684px) {
+  body {
+    background-position-x: -400px;
+    background-size: auto;
+  }
+  .result-container {
+    width: 80%;
+  }
+  .welcome-main {
+    width: 80%;
+  }
+}
 @media only screen and (max-width: 1270px) {
   body {
     background-position-x: -400px;
+    background-size: auto;
   }
 }
+
 @media only screen and (max-width: 940px) {
   body {
     overflow-y: scroll;
-    background-position-x: -500px;
+    background-position-x: -800px;
+    background-size: auto;
   }
   .form-container {
     margin: 20px auto 0px auto;
@@ -242,7 +261,14 @@ h3 {
   }
   .synonyms-container {
     width: 95%;
-    margin: 10px auto 0px auto;
+    margin: 10px auto 20px auto;
+  }
+}
+
+/* 2K Styles */
+@media only screen and (min-width: 1921px) {
+  body {
+    background-size: cover;
   }
 }
 
